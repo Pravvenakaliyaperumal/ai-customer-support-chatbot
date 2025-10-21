@@ -1,0 +1,29 @@
+{
+  "name": "PostChat Analytics",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "chatbot-log",
+        "options": {}
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "return [{ json: { status: 'Received and processed by n8n' } }];"
+      },
+      "name": "Process Message",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [{ "node": "Process Message", "type": "main", "index": 0 }]
+      ]
+    }
+  }
+}
