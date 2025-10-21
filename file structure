@@ -1,0 +1,14 @@
+ai-customer-support-chatbot/
+├── app.py
+├── agents/
+│   ├── claude_agent.py
+│   ├── gemini_agent.py
+│   └── router.py
+├── utils/
+│   ├── prompt_manager.py
+│   ├── logger.py
+│   └── analytics.py
+├── workflows/
+│   └── n8n_webhook.json
+├── requirements.txt
+└── README.md
